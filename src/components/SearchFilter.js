@@ -45,12 +45,12 @@ const SearchFilter = ({ onFilterChange, onFilterReset }) => {
         <label className="block text-sm font-medium text-gray-600"> Launch Year:</label>
 
         <select
-          value={type}
+          value={originalLaunch}
           onChange={(e) => setOriginalLaunch(e.target.value)}
           className="mt-1 block w-full p-2 border rounded-md focus:outline-none focus:border-blue-500"
         >
-          {yearsList?.map((y) => {
-            return <option value={y}>{y}</option>
+          {yearsList?.map((yr) => {
+            return <option key={yr} value={yr}>{yr}</option>
           })}
         </select>
       </div>
